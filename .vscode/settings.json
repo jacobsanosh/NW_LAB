@@ -2,6 +2,7 @@
     "files.associations": {
         "*.html": "html",
         "*.js": "javascriptreact",
-        "in.h": "c"
+        "in.h": "c",
+        "unistd.h": "c"
     }
 }

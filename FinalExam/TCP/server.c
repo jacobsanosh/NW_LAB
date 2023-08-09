@@ -8,9 +8,9 @@
 int main(){
     int server,client;
     char message[1024];
-    struct sockaddr_in servAddr,clientAddr;
-    // struct sockaddr_storage store;
-    socklen_t clientAddrSize=sizeof(clientAddr);
+    struct sockaddr_in servAddr;
+    struct sockaddr_storage store;
+    socklen_t addr_size;
 
     server=socket(AF_INET,SOCK_STREAM,0);
     servAddr.sin_family=AF_INET;
@@ -21,7 +21,7 @@ int main(){
         printf("Listening\n");
     else
         printf("Error\n");
-    client=accept(server,(struct sockaddr *)&clientAddr,&clientAddrSize);
+    client=accept(server,(struct sockaddr *)&store,&addr_size);
     recv(client,message,1024,0);
     printf("\ndata  received from client is %s",message);
     strcpy(message,"hello from server");
@@ -29,4 +29,4 @@ int main(){
     send(client,message,sizeof(message),0);
     close(server);
     close(client);
-}
+}       
