@@ -8,8 +8,7 @@
 int main(){
     FILE *fle;
     int client;
-    struct sockaddr_in servAddr,clientAddr;
-    socklen_t clientAddrSize=sizeof(clientAddr);
+    struct sockaddr_in servAddr;
     char message[1024];
     client=socket(AF_INET,SOCK_STREAM,0);
     servAddr.sin_family=AF_INET;

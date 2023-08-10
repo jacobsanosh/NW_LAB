@@ -3,6 +3,7 @@
         "*.html": "html",
         "*.js": "javascriptreact",
         "in.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "socket.h": "c"
     }
 }
