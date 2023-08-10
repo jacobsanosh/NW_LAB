@@ -20,7 +20,7 @@ int main(){
     for(int i=0;i<n-1;i++){
         int min_i,min=INT_MAX;
         for(int j=0;j<n;j++){
-            if(v[i] && min>d[j]){
+            if(!v[i] && min>d[j]){
                 min=d[j];
                 min_i=j;
             }
